@@ -1,6 +1,8 @@
-/* Custom CSS for black theme */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+
 body {
   background-color: #000;
+  font-family: 'Lexend', sans-serif;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -15,7 +17,7 @@ body {
 #header h1 {
   margin: 0;
   font-size: 24px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Lexend', sans-serif;
   color: #fff;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -36,7 +38,7 @@ body {
   font-size: 24px;
   cursor:pointer;
   text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lexend', sans-serif;
   line-height: 1.5;
   margin-bottom: 20px;
 }
