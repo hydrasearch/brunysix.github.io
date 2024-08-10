@@ -1,140 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+:root {
+            --bg-color: #141414; 
+            --text-color: #ffffff;
+            --nav-bg-color: #1e1e1e; 
+            --search-bar-bg-color: #1e1e1e;
+            --search-bar-text-color: #ffffff; 
+            --hover-color: #f39c12; 
+        }
 
-body {
-  background-color: #000;
-  font-family: 'Lexend', sans-serif;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-}
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow: hidden; 
+            position: relative;
+        }
 
-#header {
-  background-color: #000;
-  padding: 20px;
-  text-align: center;
-}
+        header {
+            background-color: var(--nav-bg-color);
+            position: fixed;
+            width: calc(100% - 200px);
+            top: 0;
+            z-index: 1000;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 100px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
 
-#header h1 {
-  margin: 0;
-  font-size: 24px;
-  font-family: 'Lexend', sans-serif;
-  color: #fff;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
 
-#header img {
-  width: 20%;
-  height: auto;
-}
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
 
-#content {
-  text-align: center;
-  padding: 20px;
-  margin-top: -4%;
-}
+        .nav-list li {
+            margin: 0 15px;
+        }
 
-#content h1 {
-  font-size: 24px;
-  cursor:pointer;
-  text-transform: uppercase;
-  font-family: 'Lexend', sans-serif;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
+        .nav-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
 
-#searchbar {
-  text-align: center;
-  margin: 20px auto;
-}
+        .nav-list a:hover {
+            color: var(--hover-color);
+        }
 
-.form__input {
-  padding: 10px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  font-size: 16px;
-  width: 300px;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  background-color: transparent;
-  text-align: center;
-  color: #fff;
-  cursor:cell;
-}
+        .logo img {
+            height: 50px;
+            margin: 0 15px;
+        }
 
-a{
-  text-decoration: none;
-  color:white;
-  width:50px;
-  height:50px;
-  padding-right: 1px;
-  padding-left: 1px;
-  text-align: center;
-  align-self: center;
-}
+        main {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
 
-.form__input::placeholder {
-  color: #aaa;
-  text-align: center;
-}
+        .centered-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
 
-.form_input:hover{
-  cursor:cell;
-}
+        #searchbar {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
+        }
 
-.form__input:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-#footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: #99ccff;
-  font-family: 'Open Sans', sans-serif;
-  width: 100%;
-  height:15px;
-  background-color: #000;
-  padding-top: 7.5px;
-  padding-bottom: 10px;
-  text-align: center;
-  color: #fff;
-  font-size: 14px;
-}
+        .form__input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: var(--search-bar-bg-color);
+            color: var(--search-bar-text-color);
+            font-size: 16px;
+            outline: none;
+        }
 
-#footer p {
-  margin: 0;
-}
+        .form__input::placeholder {
+            color: #888888;
+        }
 
-.fa {
-  font-size: 24px;
-  margin-right: 10px;
-  color: #fff;
-}
+        .search-icon {
+            width: 24px;
+            height: 24px;
+            margin-left: -35px;
+            position: relative;
+            z-index: 1;
+        }
 
-.fa:hover {
-  color: #aaa;
-}
+        .time {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            color: var(--text-color);
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
 
-.image-link {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-}
+        .theme-switcher,
+        .particle-toggle {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
 
-.hover-image {
-    width: 100%;
-    height: 100%;
-    transition: box-shadow 0.3s ease;
-    border-radius: 5px; 
-}
+        .theme-button,
+        .particle-button {
+            background-color: var(--nav-bg-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
 
-.hover-image:hover {
-    box-shadow: 0 0 10px 5px white;
-}
-
-.hover-image:active {
-    box-shadow: 0 0 10px 5px white;
-}
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
